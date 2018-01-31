@@ -28,6 +28,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
+		[SerializeField] private float m_Health;
+		[SerializeField] private bool m_IsAlive;
+		[SerializeField] private bool m_InventoryFull;
+
         private Camera m_Camera;
         private bool m_Jump;
         private float m_YRotation;
@@ -41,6 +45,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+
 
 
         // Use this for initialization
@@ -82,7 +87,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
-        }
+
+			if (m_IsAlive == false) {
+				m_RunSpeed = 0;
+				m_WalkSpeed = 0;
+			} else {
+				m_RunSpeed = 10;
+				m_WalkSpeed = 6;
+			}
+
+			if (m_Health <= 0) {
+				m_IsAlive = false;
+			} else {
+				m_IsAlive = true;
+			}
+				
+		}
 
 
         private void PlayLandingSound()
@@ -255,6 +275,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
+
+/*			if (body. && m_InventoryFull == false) {
+				body.hideFlags;
+			}*/
         }
+
+			
     }
 }
