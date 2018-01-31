@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-    public Animator WeaponHolster;
     public Animator cardboard_sword;
+	public GameObject FPSController;
+
+	private Vector3 offset;
+	void Start()
+	{
+		offset = transform.position - FPSController.transform.position;
+	}
 
     void Update()
     {
+		transform.position = FPSController.transform.position + offset;
+
         if (Input.GetButtonDown("Fire1"))
         {
             cardboard_sword.SetTrigger("ToSwingHold");
