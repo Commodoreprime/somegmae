@@ -33,6 +33,7 @@ public class camera_movement : MonoBehaviour {
 
     private void Update()
     {
+		/*
         if (Input.GetButton("Fire3"))
         {
             YInput += Input.GetAxis("Mouse Y") * speed * friction;
@@ -42,6 +43,17 @@ public class camera_movement : MonoBehaviour {
 
             transform.rotation = Quaternion.Lerp(PrevRotation, NextRotation, Time.deltaTime * smoothness);
         }
+        */
+
+		if (Input.GetAxis ("Mouse ScrollWheel") > 0f) {
+			rb.AddForce(0.0f, 1.0f * ScrollSpeed, 0.0f);
+			transform.rotation *= Quaternion.Euler(YInput, 0, 0);
+			YInput += speed;
+		} 
+		else if (Input.GetAxis ("Mouse ScrollWheel") < 0f) {
+			rb.AddForce(0.0f, -1.0f * ScrollSpeed, 0.0f);
+
+		}
         
         /*
         if (Input.GetButton("Fire3") && (Input.GetAxis("Mouse Y") > 0f))
