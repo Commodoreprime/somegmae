@@ -13,15 +13,15 @@ public class Gun_Child : MonoBehaviour {
 
 	private Vector3 rail_prevRotation;
 	private Vector3 rail_nextRotation;
+
 	// Use this for initialization
 	void Start () {
-		offsetRot = Quaternion.Euler ();
+		offsetRot = transform.rotation;
 		offset = parent.transform.position - transform.position;
 	}
-	
-	// Update is called once per frame
+
 	void LateUpdate () {
-		transform.rotation = Quaternion.Lerp (transform.rotation, parent.transform.rotation + offsetRot, Time.deltaTime);
+		transform.rotation = Quaternion.Lerp (transform.rotation, parent.transform.rotation * offsetRot, Time.deltaTime);
 		transform.position = parent.transform.position + offset;
 	}
 
@@ -29,7 +29,8 @@ public class Gun_Child : MonoBehaviour {
 		if (Input.GetKey (KeyCode.Q)) {
 			rail_prevRotation = rail.transform.position;
 			rail.transform.rotation = Quaternion.Lerp (rail_prevRotation, rail_nextRotation, Time.deltaTime);
-			rail_nextRotation = rail_nextRotation + rotationAmmount;
+			rail_nextRotation.x = rail_nextRotation.x + rotationAmmount;
+			rail_nextRotation.y = rail_nextRotation.y + rotationAmmount;
 		}
 	}
 }
