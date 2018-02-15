@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-public class Reeeeeeeee : MonoBehaviour {
+public class Test : MonoBehaviour {
 
 
 	// Use this for initialization
