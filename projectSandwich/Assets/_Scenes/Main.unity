@@ -195,7 +195,7 @@ Transform:
   m_LocalScale: {x: 10, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &131751929
 GameObject:
@@ -480,6 +480,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1609734757}
+  - {fileID: 1062020780}
   m_Father: {fileID: 861714280}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -624,7 +625,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 772700859}
-  - {fileID: 1062020780}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -656,7 +656,7 @@ Transform:
   m_LocalPosition: {x: 0.56, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
-  m_Father: {fileID: 861714280}
+  m_Father: {fileID: 772700859}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1062020781
@@ -704,7 +704,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b30f0d4b166f4dd69eac4b9914932a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  parent: {fileID: 0}
+  rail: {fileID: 1609734756}
+  rotationAmmount: 1
 --- !u!33 &1062020783
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -823,3 +825,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc673725acf2c4f53a94cbb8cc05da78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hazard: {fileID: 0}
+  spawnValues: {x: 0, y: 0, z: 0}
+  hazardCount: 0
+  spawnWait: 0
+  startWait: 0
+  waveWait: 0
