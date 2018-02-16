@@ -9,6 +9,7 @@ public class PlayerControler : MonoBehaviour
 	public float jumpSpeed = 8.0F;
 	private Vector3 moveDirection = Vector3.zero;
 	public float gravity = 20.0f;
+	public string powerup = "";
 
 	void Awake()
 	{
@@ -17,6 +18,7 @@ public class PlayerControler : MonoBehaviour
 
 	void Update()
 	{
+
 		if (controller.isGrounded)
 		{
 			moveDirection = transform.right * Input.GetAxis("Horizontal") * speed;
@@ -27,5 +29,14 @@ public class PlayerControler : MonoBehaviour
 		}
 		controller.Move(moveDirection * Time.deltaTime);
 		moveDirection.y -= gravity * Time.deltaTime;
+	}
+
+	//Detects a collision
+	void OnCollisionEnter (Collision col)
+	{
+		if (col.gameObject.tag == "powerup"){
+			powerup = col.gameObject.name;
+		}
+
 	}
 }
