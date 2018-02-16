@@ -412,6 +412,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1676779183105360, guid: 211f00e0714e047738dfe194d15ec2e5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 211f00e0714e047738dfe194d15ec2e5, type: 2}
   m_IsPrefabParent: 0
@@ -499,7 +503,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1609734757}
-  - {fileID: 1062020780}
   m_Father: {fileID: 861714280}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -672,12 +675,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1062020779}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.56, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 772700859}
-  m_RootOrder: 1
+  m_Father: {fileID: 1609734757}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1062020781
 MeshRenderer:
@@ -719,14 +722,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1062020779}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b30f0d4b166f4dd69eac4b9914932a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 0}
+  parent: {fileID: 1609734756}
   rail: {fileID: 1609734756}
-  rotationAmmount: 1
 --- !u!33 &1062020783
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -827,6 +829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1609734757}
   - component: {fileID: 1609734758}
+  - component: {fileID: 1609734759}
   m_Layer: 0
   m_Name: gun_rail
   m_TagString: Untagged
@@ -843,7 +846,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_Children: []
+  m_Children:
+  - {fileID: 1062020780}
   m_Father: {fileID: 772700859}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -859,6 +863,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1609734759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1609734756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b8cf696aff9a4819bf5c2ed9b990b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 1062020779}
 --- !u!1001 &1867064650
 Prefab:
   m_ObjectHideFlags: 0
@@ -929,7 +945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc673725acf2c4f53a94cbb8cc05da78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hazard: {fileID: 1867064651}
+  hazard: {fileID: 0}
   spawnValues: {x: 1, y: 10, z: 1}
   hazardCount: 0
   spawnWait: 0
