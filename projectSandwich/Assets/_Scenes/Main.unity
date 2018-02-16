@@ -354,6 +354,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &702086932 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1676779183105360, guid: 211f00e0714e047738dfe194d15ec2e5,
+    type: 2}
+  m_PrefabInternal: {fileID: 748577503}
+--- !u!114 &702086937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 702086932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3c8ff5f274dc425d961e8c64eea212f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 772700859}
+  moveSpeed: 10
+  rotationSpeed: 10
 --- !u!1001 &748577503
 Prefab:
   m_ObjectHideFlags: 0
@@ -825,9 +844,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc673725acf2c4f53a94cbb8cc05da78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hazard: {fileID: 0}
-  spawnValues: {x: 0, y: 0, z: 0}
-  hazardCount: 0
-  spawnWait: 0
-  startWait: 0
-  waveWait: 0
+  hazard: {fileID: 1867064651}
+  spawnValues: {x: 1, y: 10, z: 1}
+  hazardCount: 10000
+  spawnWait: 0.0001
+  startWait: 1
+  waveWait: 0.000000001
