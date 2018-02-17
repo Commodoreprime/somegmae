@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 43040699}
   m_Layer: 0
   m_Name: Platform2
-  m_TagString: Untagged
+  m_TagString: scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266,9 +266,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 131751929}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 150, y: 1, z: 1}
+  m_LocalScale: {x: 1000, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -430,8 +430,8 @@ GameObject:
   - component: {fileID: 772700858}
   - component: {fileID: 772700857}
   - component: {fileID: 772700856}
-  - component: {fileID: 772700860}
   - component: {fileID: 772700861}
+  - component: {fileID: 772700860}
   m_Layer: 0
   m_Name: Cube_player
   m_TagString: Untagged
@@ -517,7 +517,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa8c2f7e6a3c4cae9540021341e86e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 8
+  runKey: 304
+  speedMultiplier: 2
   jumpSpeed: 15
   gravity: 20
   powerup: 
@@ -535,9 +537,55 @@ CharacterController:
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.02
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &790967751
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4912873371577634, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912873371577634, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912873371577634, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912873371577634, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912873371577634, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912873371577634, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912873371577634, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912873371577634, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446702161865220, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &860584705
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +599,7 @@ GameObject:
   - component: {fileID: 860584706}
   m_Layer: 0
   m_Name: Platform1
-  m_TagString: Untagged
+  m_TagString: scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -722,13 +770,15 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1062020779}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b30f0d4b166f4dd69eac4b9914932a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 1609734756}
-  rail: {fileID: 1609734756}
+  parent: {fileID: 1062020780}
+  player_bullet: {fileID: 1446702161865220, guid: c24e00e26a1622942aac6141824b01fb,
+    type: 2}
+  fireRate: 0.2
 --- !u!33 &1062020783
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -828,7 +878,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1609734757}
-  - component: {fileID: 1609734758}
   - component: {fileID: 1609734759}
   m_Layer: 0
   m_Name: gun_rail
@@ -843,7 +892,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1609734756}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
@@ -851,18 +900,6 @@ Transform:
   m_Father: {fileID: 772700859}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1609734758
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1609734756}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1609734759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -874,7 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8cf696aff9a4819bf5c2ed9b990b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 1062020779}
+  sensitivity: 8
 --- !u!1001 &1867064650
 Prefab:
   m_ObjectHideFlags: 0
@@ -884,15 +921,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.39
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 29.09
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.018692767
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
       propertyPath: m_LocalRotation.x

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - powerup
+  - scene
   layers:
   - Default
   - TransparentFX
