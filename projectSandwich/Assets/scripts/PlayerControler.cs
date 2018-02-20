@@ -27,5 +27,18 @@ public class PlayerControler : MonoBehaviour
 		}
 		controller.Move(moveDirection * Time.deltaTime);
 		moveDirection.y -= gravity * Time.deltaTime;
+
 	}
+<<<<<<< HEAD:projectSandwich/Assets/scripts/Player/PlayerControler.cs
+
+	//Detects a collision
+	void OnTriggerEnter (Collision col)
+	{
+		if (col.gameObject.tag == "powerup"){
+			powerup = col.gameObject.name;
+		}
+
+	}
+=======
+>>>>>>> 1adef1901280daf7d925f10d25bc727300b1f070:projectSandwich/Assets/scripts/PlayerControler.cs
 }
