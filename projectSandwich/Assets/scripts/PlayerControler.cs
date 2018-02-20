@@ -17,10 +17,6 @@ public class PlayerControler : MonoBehaviour
 
 	void Update()
 	{
-<<<<<<< HEAD:projectSandwich/Assets/scripts/PlayerControler.cs
-=======
-
->>>>>>> parent of e696a74... Improvment on multiple things:projectSandwich/Assets/scripts/PlayerControler.cs
 		if (controller.isGrounded)
 		{
 			moveDirection = transform.right * Input.GetAxis("Horizontal") * speed;
