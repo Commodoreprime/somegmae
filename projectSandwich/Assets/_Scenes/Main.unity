@@ -657,14 +657,19 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1062020779}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b30f0d4b166f4dd69eac4b9914932a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   parent: {fileID: 0}
   rail: {fileID: 1609734756}
   rotationAmmount: 1
+=======
+  parent: {fileID: 1609734756}
+  rail: {fileID: 1609734756}
+>>>>>>> parent of e696a74... Improvment on multiple things
 --- !u!33 &1062020783
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -681,6 +686,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1609734757}
   - component: {fileID: 1609734758}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 1609734759}
+>>>>>>> parent of e696a74... Improvment on multiple things
   m_Layer: 0
   m_Name: gun_rail
   m_TagString: Untagged
@@ -703,6 +712,8 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1609734758
 SphereCollider:
+<<<<<<< HEAD
+=======
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -713,3 +724,100 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1609734759
+MonoBehaviour:
+>>>>>>> parent of e696a74... Improvment on multiple things
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1609734756}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+<<<<<<< HEAD
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+=======
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b8cf696aff9a4819bf5c2ed9b990b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 1062020779}
+--- !u!1001 &1867064650
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 29.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.018692767
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 3.9270637
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
+      propertyPath: m_LocalScale.y
+      value: -4.574521
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781607383709682, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
+      propertyPath: m_Name
+      value: Captain Meow
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &1867064651 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1781607383709682, guid: 3c8b894c672ab41ac95fc48f55b691fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1867064650}
+--- !u!114 &1867064652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1867064651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc673725acf2c4f53a94cbb8cc05da78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hazard: {fileID: 0}
+  spawnValues: {x: 1, y: 10, z: 1}
+  hazardCount: 0
+  spawnWait: 0
+  startWait: 0
+  waveWait: 0
+>>>>>>> parent of e696a74... Improvment on multiple things

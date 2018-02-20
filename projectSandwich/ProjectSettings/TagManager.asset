@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags: []
+=======
+  tags:
+  - powerup
+>>>>>>> parent of e696a74... Improvment on multiple things
   layers:
   - Default
   - TransparentFX
