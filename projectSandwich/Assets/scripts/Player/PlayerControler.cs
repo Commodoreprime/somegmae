@@ -41,10 +41,11 @@ public class PlayerControler : MonoBehaviour
 		}
 		controller.Move(moveDirection * Time.deltaTime);
 		moveDirection.y -= gravity * Time.deltaTime;
+
 	}
 
 	//Detects a collision
-	void OnCollisionEnter (Collision col)
+	void OnTriggerEnter (Collision col)
 	{
 		if (col.gameObject.tag == "powerup"){
 			powerup = col.gameObject.name;
