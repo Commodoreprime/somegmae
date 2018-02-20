@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: c5ead48e5db784fac9184879a863f5d3
 timeCreated: 1519150049
 licenseType: Free
@@ -7,13 +8,18 @@ NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0
 =======
+=======
+>>>>>>> parent of 6160a67... Merge branch 'master' of https://github.com/Commodoreprime/somegmae
 guid: 8b16b226c1bd34fb6a44f9b1c2c5a820
 timeCreated: 1518720521
 licenseType: Free
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 100100000
+<<<<<<< HEAD
 >>>>>>> 8b2f1bee16cc7e62bdceb29e9b008ce1e018804a
+=======
+>>>>>>> parent of 6160a67... Merge branch 'master' of https://github.com/Commodoreprime/somegmae
   userData: 
   assetBundleName: 
   assetBundleVariant: 
