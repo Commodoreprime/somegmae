@@ -77,7 +77,6 @@ GameObject:
   - component: {fileID: 33708323670177856}
   - component: {fileID: 65653480880534348}
   - component: {fileID: 23501898945145196}
-  - component: {fileID: 114954406023458754}
   m_Layer: 0
   m_Name: Enemy 7
   m_TagString: Untagged
@@ -615,6 +614,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+<<<<<<< HEAD
 --- !u!114 &114252527877164692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -643,6 +643,8 @@ MonoBehaviour:
   target: {fileID: 0}
   moveSpeed: 1
   rotationSpeed: 1
+=======
+>>>>>>> 9c914cec25c841c82fa6bde0ca648d43dc30fef9
 --- !u!135 &135253819974356454
 SphereCollider:
   m_ObjectHideFlags: 1
