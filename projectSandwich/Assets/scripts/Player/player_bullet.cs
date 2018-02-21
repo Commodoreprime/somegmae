@@ -36,5 +36,9 @@ public class player_bullet : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+
+		if (col.gameObject.tag == "Enemy") {
+			Destroy (col.gameObject);
+		}
     }
 }

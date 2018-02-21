@@ -540,52 +540,6 @@ CharacterController:
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1001 &790967751
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4912873371577634, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4912873371577634, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4912873371577634, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4912873371577634, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4912873371577634, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4912873371577634, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4912873371577634, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4912873371577634, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1446702161865220, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &860584705
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +732,7 @@ MonoBehaviour:
   parent: {fileID: 1062020780}
   player_bullet: {fileID: 1446702161865220, guid: c24e00e26a1622942aac6141824b01fb,
     type: 2}
-  fireRate: 0.2
+  fireRate: 3
 --- !u!33 &1062020783
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -982,7 +936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc673725acf2c4f53a94cbb8cc05da78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hazard: {fileID: 0}
+  hazard: {fileID: 1209093137106442, guid: 09881ce626b7a47178f9aa4cd3a8b620, type: 2}
   spawnValues: {x: 1, y: 10, z: 1}
   hazardCount: 0
   spawnWait: 0
