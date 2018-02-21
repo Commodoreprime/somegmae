@@ -10,7 +10,7 @@ public class PlayerControler : MonoBehaviour
     public float speedMultiplier = 2f;
 
 	public float jumpSpeed = 8.0F;
-	private Vector3 moveDirection = Vector3.zero;
+	private Vector2 moveDirection = Vector2.zero;
 	public float gravity = 20.0f;
 	public string powerup = "";
 
@@ -21,7 +21,8 @@ public class PlayerControler : MonoBehaviour
 
 	void Update()
 	{
-        //Running mechanic (at the time of creation I don't know if its a good idea but whatever)
+
+		//Running mechanic (at the time of creation I don't know if its a good idea but whatever)
         if (Input.GetKeyDown(runKey))
         {
             speed = speed * speedMultiplier;
@@ -31,14 +32,10 @@ public class PlayerControler : MonoBehaviour
             speed = speed / speedMultiplier;
         }
 
-		if (controller.isGrounded)
-		{
-			moveDirection = transform.right * Input.GetAxis("Horizontal") * speed;
-			if (Input.GetButton("Jump"))
-			{
-				moveDirection.y += jumpSpeed;
-			}
+		if (controller.isGrounded) {
+			moveDirection = (transform.right * Input.GetAxis ("Horizontal") * speed) + (transform.up * Input.GetAxis ("Jump") * jumpSpeed);
 		}
+			
 		controller.Move(moveDirection * Time.deltaTime);
 		moveDirection.y -= gravity * Time.deltaTime;
 	}
@@ -46,7 +43,7 @@ public class PlayerControler : MonoBehaviour
 	//Detects a collision
 	void OnCollisionEnter (Collision col)
 	{
-		if (col.gameObject.tag == "powerup"){
+		if (col.gameObject.tag == "scene"){
 			powerup = col.gameObject.name;
 		}
 
