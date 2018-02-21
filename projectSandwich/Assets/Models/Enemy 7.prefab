@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 33708323670177856}
   - component: {fileID: 65653480880534348}
   - component: {fileID: 23501898945145196}
+  - component: {fileID: 114005710398319590}
   m_Layer: 0
   m_Name: Enemy 7
   m_TagString: Untagged
@@ -348,6 +349,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114005710398319590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781607383709682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3c8ff5f274dc425d961e8c64eea212f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  moveSpeed: 1
+  rotationSpeed: 1
 --- !u!135 &135253819974356454
 SphereCollider:
   m_ObjectHideFlags: 1
