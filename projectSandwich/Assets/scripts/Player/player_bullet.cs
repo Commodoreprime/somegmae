@@ -32,7 +32,7 @@ public class player_bullet : MonoBehaviour {
 
     private void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.tag == "scene")
+        if(col.gameObject.tag == "Enemy")
         {
             Destroy(gameObject);
         }
