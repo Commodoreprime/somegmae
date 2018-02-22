@@ -33,8 +33,8 @@ public class AiCode : MonoBehaviour {
 
 	}
 
-	void OnCollisionEnter(Collision col){
-		if (col.gameObject.tag == "Bullet") {
+	void OnTriggerEnter(Collision col){
+		if (col.gameObject.CompareTag("Bullet")) {
 			Destroy (gameObject);
 		}
 	}
