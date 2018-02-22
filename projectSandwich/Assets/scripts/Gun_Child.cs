@@ -1,36 +1,29 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun_Child : MonoBehaviour {
-	private Vector3 offset;
-	private Quaternion offsetRot;
+public class Gun_fire : MonoBehaviour {
 
-	public GameObject parent;
-	public GameObject rail;
+    //Gets the Transform of a object put in via unity editor
+    public Transform parent;
+    
+    //Prefab used in instantiate below
+    public GameObject player_bullet;
 
-	public float rotationAmmount = 1;
+    //Declare float for the rate of fire of 'player_bullet'
+    public float fireRate = 3;
+    
+    //float that is used to compare against Time.time
+    private float nextFire;
 
-	private Quaternion rail_prevRotation;
-	private Quaternion rail_nextRotation;
-
-	// Use this for initialization
-	void Start () {
-		offsetRot = transform.rotation;
-		offset = parent.transform.position - transform.position;
-	}
-
-	void LateUpdate () {
-		transform.rotation = Quaternion.Lerp (transform.rotation, parent.transform.rotation * offsetRot, Time.deltaTime);
-		transform.position = parent.transform.position + offset;
-	}
-
-	void Update(){
-		if (Input.GetKey (KeyCode.Q)) {
-			rail_prevRotation = rail.transform.rotation;
-			rail.transform.rotation = Quaternion.Lerp (rail_prevRotation, rail_nextRotation, Time.deltaTime);
-			rail_nextRotation.x = rail_nextRotation.x + rotationAmmount;
-			rail_nextRotation.y = rail_nextRotation.y + rotationAmmount;
-		}
-	}
+    private void FixedUpdate()
+    {
+        //If statement that checks two things, if the user has mouse1 held down amd if the gametime is greater than nextFire
+        // if both are met, it adds gametime and the delcared 'fireRate' to nextfire then it clones the 'player_bullet' prefab at the declared parents position and parents rotation
+        if (Input.GetButton("Fire1") && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(player_bullet, parent.position, parent.transform.rotation);
+        }
+    }
 }
