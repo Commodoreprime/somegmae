@@ -32,10 +32,4 @@ public class AiCode : MonoBehaviour {
 		myTransform.position += (target.position - myTransform.position).normalized * moveSpeed * Time.deltaTime;
 
 	}
-
-	void OnTriggerEnter(Collision col){
-		if (col.gameObject.CompareTag("Bullet")) {
-			Destroy (gameObject);
-		}
-	}
 }
