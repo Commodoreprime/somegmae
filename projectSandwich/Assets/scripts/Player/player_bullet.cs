@@ -30,11 +30,11 @@ public class player_bullet : MonoBehaviour {
         }
     }
 
-    private void OnCollisionEnter(Collision col)
-    {
-        if(col.gameObject.tag == "Enemy")
-        {
-            Destroy(gameObject);
-        }
-    }
+	private void OnTriggerEnter(Collider col)
+	{
+		if (col.CompareTag ("Enemy")) {
+			Destroy (col.gameObject);
+		}
+	}
+
 }
