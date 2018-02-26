@@ -516,7 +516,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1446702161865220, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
@@ -530,11 +530,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4464651344688064, guid: 885907bef7f0d44d2adbf5973d227c36, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.69
+      value: 14400.5
       objectReference: {fileID: 0}
     - target: {fileID: 4464651344688064, guid: 885907bef7f0d44d2adbf5973d227c36, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 29893.1
       objectReference: {fileID: 0}
     - target: {fileID: 4464651344688064, guid: 885907bef7f0d44d2adbf5973d227c36, type: 2}
       propertyPath: m_LocalPosition.z
@@ -567,7 +567,7 @@ Prefab:
       objectReference: {fileID: 772700859}
     - target: {fileID: 1295071473839494, guid: 885907bef7f0d44d2adbf5973d227c36, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 885907bef7f0d44d2adbf5973d227c36, type: 2}
@@ -762,9 +762,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 1062020780}
-  player_bullet: {fileID: 1446702161865220, guid: c24e00e26a1622942aac6141824b01fb,
+  player_bullet: {fileID: 1781607383709682, guid: 3c8b894c672ab41ac95fc48f55b691fe,
     type: 2}
-  fireRate: 0.2
+  fireRate: 0.1
 --- !u!33 &1062020783
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -975,7 +975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hazard: {fileID: 1743065290}
   spawnValues: {x: 1, y: 10, z: 1}
-  hazardCount: 1
+  hazardCount: 5
   spawnWait: 1
   startWait: 1
   waveWait: 1
