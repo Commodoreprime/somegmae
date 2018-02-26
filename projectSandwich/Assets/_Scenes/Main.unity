@@ -475,6 +475,8 @@ CharacterController:
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
 --- !u!1001 &790967751
 Prefab:
   m_ObjectHideFlags: 0
@@ -521,6 +523,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c24e00e26a1622942aac6141824b01fb, type: 2}
   m_IsPrefabParent: 0
+>>>>>>> 1d6ea7bbe703cc1f6c0e5c05c884d61dfb6b4898
 --- !u!1 &860584705
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,7 +767,7 @@ MonoBehaviour:
   parent: {fileID: 1062020780}
   player_bullet: {fileID: 1446702161865220, guid: c24e00e26a1622942aac6141824b01fb,
     type: 2}
-  fireRate: 0.2
+  fireRate: 3
 --- !u!33 &1062020783
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1060,6 +1063,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hazard: {fileID: 1209093137106442, guid: 09881ce626b7a47178f9aa4cd3a8b620, type: 2}
+<<<<<<< HEAD
+  spawnValues: {x: 1, y: 10, z: 1}
+  hazardCount: 0
+  spawnWait: 0
+  startWait: 0
+  waveWait: 0
+=======
   spawnValues: {x: 1, y: 20, z: 1}
   hazardCount: 1
   spawnWait: 1
@@ -1218,3 +1228,4 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 35c5608509df242fc87b70352bc20409, type: 2}
   m_IsPrefabParent: 0
+>>>>>>> 1d6ea7bbe703cc1f6c0e5c05c884d61dfb6b4898
