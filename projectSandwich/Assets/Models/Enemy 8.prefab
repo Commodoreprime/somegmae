@@ -94,9 +94,10 @@ GameObject:
   - component: {fileID: 33759839509327648}
   - component: {fileID: 65037123393549638}
   - component: {fileID: 23120716000840426}
+  - component: {fileID: 114902464144631040}
   m_Layer: 0
   m_Name: Enemy 8
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -540,3 +541,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114902464144631040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1584923070401598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3c8ff5f274dc425d961e8c64eea212f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 4025393463797712, guid: c471a97ce4b3c4c57a79c73e5c046fa3, type: 2}
+  moveSpeed: 1
+  rotationSpeed: 1

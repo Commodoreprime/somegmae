@@ -8,6 +8,7 @@ TagManager:
   - scene
   - Enemy
   - Bullet
+  - 'Spawner '
   layers:
   - Default
   - TransparentFX

@@ -46,8 +46,8 @@ public class PlayerControler : MonoBehaviour
 	//Detects a collision
 	void OnTriggerEnter (Collider col)
 	{
-		if (col.CompareTag("powerup")){
-			Destroy(col.gameObject);
+		if (col.CompareTag("Enemy")){
+			Destroy(gameObject);
 		}
 
 	}
