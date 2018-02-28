@@ -9,11 +9,6 @@ public class gun_rail_move : MonoBehaviour {
 
     // Float to store the X axis of mouse movement
 	private float mouseX;
-
-	void Start () {
-        // Just locks the cursor to the center so its not so anoying, and apparently makes it invisible (on windows at least), Neat!
-        Cursor.lockState = CursorLockMode.Locked;
-	}
 	
 	void Update () {
         // Gets mouse input on the X axis and inverts it (makes it negative)
