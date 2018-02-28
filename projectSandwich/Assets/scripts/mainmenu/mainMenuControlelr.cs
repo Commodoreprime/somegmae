@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class mainMenuControlelr : MonoBehaviour {
 
+	// Animation controller attached to the GameObject named "scrolltext"
     public Animator Anim;
 
 	// Use this for initialization
@@ -21,6 +22,7 @@ public class mainMenuControlelr : MonoBehaviour {
             Anim.SetTrigger("menu_exit");
             Cursor.lockState = CursorLockMode.Locked;
             Anim.SetBool("Game", true);
+			globalVariables.GameOn = false;
         }
 
         if (Input.GetKey(KeyCode.LeftAlt) && Anim.GetBool("Game") == true)
