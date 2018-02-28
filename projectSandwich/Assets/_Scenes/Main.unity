@@ -405,11 +405,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -45.9
+      value: -51.1
       objectReference: {fileID: 0}
     - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 18.4
+      value: 10.6
       objectReference: {fileID: 0}
     - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
       propertyPath: m_LocalPosition.z
@@ -638,8 +638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc673725acf2c4f53a94cbb8cc05da78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hazard: {fileID: 1843039077246698, guid: cbf6f93df3bf04d50a356984e15ad1f0, type: 2}
-  spawnValues: {x: 38, y: 17, z: 0}
+  hazard: {fileID: 1906741237441448, guid: 7c8da3ad586b2477a9b313d5a5cdd76b, type: 2}
+  spawnValues: {x: 83, y: 17, z: 0}
   hazardCount: 10
   spawnWait: 0.5
   startWait: 0.5
@@ -761,7 +761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hazard: {fileID: 1676779183105360, guid: 211f00e0714e047738dfe194d15ec2e5, type: 2}
-  spawnValues: {x: -46, y: 14, z: 0}
+  spawnValues: {x: -80, y: 10, z: 0}
   hazardCount: 20
   spawnWait: 1
   startWait: 0.5
@@ -775,11 +775,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 33.4
+      value: 33.7
       objectReference: {fileID: 0}
     - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
       propertyPath: m_LocalPosition.z
@@ -840,8 +840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc673725acf2c4f53a94cbb8cc05da78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hazard: {fileID: 1701994467168842, guid: 35c5608509df242fc87b70352bc20409, type: 2}
-  spawnValues: {x: 3, y: 27, z: 1}
+  hazard: {fileID: 1843039077246698, guid: cbf6f93df3bf04d50a356984e15ad1f0, type: 2}
+  spawnValues: {x: -0.1, y: 30, z: 0}
   hazardCount: 10
   spawnWait: 1
   startWait: 0.5
@@ -855,11 +855,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 38.3
+      value: 50.4
       objectReference: {fileID: 0}
     - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 20.7
+      value: 10.3
       objectReference: {fileID: 0}
     - target: {fileID: 4939208765851140, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
       propertyPath: m_LocalPosition.z

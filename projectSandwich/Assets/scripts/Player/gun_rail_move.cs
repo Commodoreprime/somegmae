@@ -5,7 +5,7 @@ using UnityEngine;
 public class gun_rail_move : MonoBehaviour {
 
     //Float for changing gun rotation speed
-    public float sensitivity = 5;
+    public float sensitivity = 8;
 
     // Float to store the X axis of mouse movement
 	private float mouseX;

@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4025393463797712, guid: c471a97ce4b3c4c57a79c73e5c046fa3, type: 2}
-  moveSpeed: 3
+  moveSpeed: 4
   rotationSpeed: 1
 --- !u!136 &136307001352598804
 CapsuleCollider:

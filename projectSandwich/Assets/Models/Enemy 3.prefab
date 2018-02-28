@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4025393463797712, guid: c471a97ce4b3c4c57a79c73e5c046fa3, type: 2}
-  moveSpeed: 1
+  moveSpeed: 3
   rotationSpeed: 1
 --- !u!135 &135189016756058512
 SphereCollider:
