@@ -11,8 +11,8 @@ public class gun_rail_move : MonoBehaviour {
 	private float mouseX;
 	
 	void Update () {
-		
-		if (globalVariables.GameOn == true) {
+
+		if (globalVariables.Instance.GameOn) {
 			// Gets mouse input on the X axis and inverts it (makes it negative)
 			mouseX = -(Input.GetAxis ("Mouse X"));
 

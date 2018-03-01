@@ -17,20 +17,19 @@ public class mainMenuControlelr : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.Space)) && Anim.GetBool("Game") == false)
+		if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.Space)) && globalVariables.Instance.GameOn == false)
         {
+			globalVariables.Instance.GameOn = true;
             Anim.SetTrigger("menu_exit");
             Cursor.lockState = CursorLockMode.Locked;
-            Anim.SetBool("Game", true);
-			globalVariables.GameOn = false;
         }
 
-        if (Input.GetKey(KeyCode.LeftAlt) && Anim.GetBool("Game") == true)
+		if (Input.GetKey(KeyCode.LeftAlt) && globalVariables.Instance.GameOn == true)
         {
+			globalVariables.Instance.GameOn = false;
             Cursor.lockState = CursorLockMode.None;
             Anim.SetTrigger("menu_enter");
             Anim.SetTrigger("menu_static");
-            Anim.SetBool("Game", false);
         }
 	}
 }
