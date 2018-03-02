@@ -21,6 +21,7 @@ public class SpawnEnemyProper : MonoBehaviour
 		while (true)
 		{
 			for (int i = 0; i < hazardCount; i++)
+// Took out Random.range (-spawnValues.x, spawnValues.x) Wanted to stop random spawn locations
 			{
 				Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, spawnValues.z);
 				Quaternion spawnRotation = Quaternion.identity;
