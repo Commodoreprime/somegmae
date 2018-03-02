@@ -10,9 +10,6 @@ public class mainMenuControlelr : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Anim.SetTrigger("menu_static");
-
-        // Just locks the cursor to the center so its not so anoying, and apparently makes it invisible (on windows at least), Neat!
-        Cursor.lockState = CursorLockMode.Confined;
     }
 	
 	// Update is called once per frame
@@ -31,5 +28,9 @@ public class mainMenuControlelr : MonoBehaviour {
             Anim.SetTrigger("menu_enter");
             Anim.SetTrigger("menu_static");
         }
+
+		if (globalVariables.Instance.GameOn == true) {
+			Cursor.lockState = CursorLockMode.Locked;
+		}
 	}
 }
