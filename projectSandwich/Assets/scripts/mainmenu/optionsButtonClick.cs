@@ -15,6 +15,6 @@ public class optionsButtonClick : MonoBehaviour {
 
 	void TaskOnClick(){
 		
-		Debug.Log ("The 'Options' button has been clicked!");
+		Debug.Log ("The 'Options' button has been clicked at: "+ (int)Time.time);
 	}
 }

@@ -17,7 +17,7 @@ public class gun_rail_move : MonoBehaviour {
 			mouseX = -(Input.GetAxis ("Mouse X"));
 
 			// Applies X axis times sensitivity float to rail's rotation
-			transform.Rotate(0, 0, mouseX * sensitivity, Space.World);
+			transform.Rotate (0, 0, mouseX * sensitivity, Space.World);
 		}
 	}
 }
