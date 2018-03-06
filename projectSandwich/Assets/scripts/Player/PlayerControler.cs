@@ -44,7 +44,7 @@ public class PlayerControler : MonoBehaviour
 	}
 
 	//Detects a collision
-	void OnTriggerEnter(Collider col)
+	private void OnTriggerEnter(Collider col)
 	{
 		if(col.CompareTag("Enemy"))
 		{
