@@ -13,6 +13,9 @@ public class globalVariables : MonoBehaviour {
 		Instance = this;
 	}
 
+	// Variables stuff onfourth
+
+	public bool OptionsMenuEnable = false;
 	public bool GameOn = false;
 
 	// Use this for initialization

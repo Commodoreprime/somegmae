@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 36059533}
   - component: {fileID: 36059532}
   m_Layer: 5
-  m_Name: Clickhandle
+  m_Name: optionsEnterButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -664,6 +664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Anim: {fileID: 1401492721}
+  OptionsMenu: {fileID: 632815998}
 --- !u!1 &632815998
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,7 +698,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 542.67505, y: -223.5}
+  m_AnchoredPosition: {x: 537.3, y: -223.5}
   m_SizeDelta: {x: 1085.4, y: 447}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &632816000
@@ -1424,8 +1425,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.8672241, y: -4.696536}
-  m_SizeDelta: {x: 1024.1, y: 383.3}
+  m_AnchoredPosition: {x: -0.3, y: 0.7}
+  m_SizeDelta: {x: 24.9, y: 29.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1071324793
 MonoBehaviour:
@@ -1572,6 +1573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c86b4aba5fe46d8971f387d74529fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OptionsMenuEnable: 0
   GameOn: 0
 --- !u!4 &1384376946
 Transform:
@@ -1597,7 +1599,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e92de8c9d40455f9f35d189e319ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 36059532}
+  OptionsMenu: {fileID: 0}
+  button: {fileID: 1701651118}
+  Anim: {fileID: 632816000}
 --- !u!1 &1401492719
 GameObject:
   m_ObjectHideFlags: 0

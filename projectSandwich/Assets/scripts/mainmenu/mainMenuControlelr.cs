@@ -6,6 +6,7 @@ public class mainMenuControlelr : MonoBehaviour {
 
 	// Animation controller attached to the GameObject named "scrolltext"
     public Animator Anim;
+	public GameObject OptionsMenu;
 
 	// Use this for initialization
 	void Start () {
@@ -31,6 +32,13 @@ public class mainMenuControlelr : MonoBehaviour {
 
 		if (globalVariables.Instance.GameOn == true) {
 			Cursor.lockState = CursorLockMode.Locked;
+		}
+
+		if (globalVariables.Instance.OptionsMenuEnable == false) {
+			OptionsMenu.SetActive (false);
+		}
+		else if (globalVariables.Instance.OptionsMenuEnable == true){
+			OptionsMenu.SetActive (true);
 		}
 	}
 }
