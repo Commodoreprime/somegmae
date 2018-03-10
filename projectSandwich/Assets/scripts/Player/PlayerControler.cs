@@ -12,18 +12,12 @@ public class PlayerControler : MonoBehaviour
 	public float jumpSpeed = 8.0F;
 	private Vector3 moveDirection = Vector3.zero;
 	public float gravity = 20.0f;
-    private float prevGravity;
 	public string powerup = "";
 
 	void Awake()
 	{
 		controller = GetComponent<CharacterController>();
 	}
-
-    private void Start()
-    {
-        prevGravity = gravity;
-    }
 
     void Update()
 	{
