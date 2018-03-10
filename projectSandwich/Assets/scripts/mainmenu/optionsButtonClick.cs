@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,27 +6,27 @@ using UnityEngine.UI;
 public class optionsButtonClick : MonoBehaviour {
 
 	public Button OptionsMenu;
-	public Button button;
-
-	public Animator Anim;
+	public Button ExitButton;
 
 	// Use this for initialization
 	void Start () {
 		Button btn0 = OptionsMenu.GetComponent<Button> ();
 		btn0.onClick.AddListener (OptionsMainMenuButton);
 
-		Button btn1 = button.GetComponent<Button> ();
-		btn1.onClick.AddListener (GenericButtonEvent);
+		Button btn1 = ExitButton.GetComponent<Button> ();
+		btn1.onClick.AddListener (ExitButtonEvent);
 	}
 
-	// Everything below is custom listeners for the butons in the options menu (including the options button itself on the main screen)
+	// Everything below are custom events for the buttons in the options menu (including the options button itself on the main screen)
 
 	void OptionsMainMenuButton(){
 		
-		globalVariables.Instance.OptionsMenuEnable = true;
-	}
+		globalVariables.Instance.OptionsMenuEnabled = true;
+        globalVariables.Instance.InSubMenu = true;
+    }
 
-	void GenericButtonEvent(){
-		
-	}
+	void ExitButtonEvent(){
+        globalVariables.Instance.OptionsMenuEnabled = false;
+        globalVariables.Instance.InSubMenu = false;
+    }
 }

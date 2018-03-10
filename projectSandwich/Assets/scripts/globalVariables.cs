@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,11 +15,7 @@ public class globalVariables : MonoBehaviour {
 
 	// Variables stuff onfourth
 
-	public bool OptionsMenuEnable = false;
+	public bool OptionsMenuEnabled = false;
 	public bool GameOn = false;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public bool InSubMenu = false;
 }

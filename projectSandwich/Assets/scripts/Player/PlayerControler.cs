@@ -12,6 +12,7 @@ public class PlayerControler : MonoBehaviour
 	public float jumpSpeed = 8.0F;
 	private Vector3 moveDirection = Vector3.zero;
 	public float gravity = 20.0f;
+    private float prevGravity;
 	public string powerup = "";
 
 	void Awake()
@@ -19,28 +20,37 @@ public class PlayerControler : MonoBehaviour
 		controller = GetComponent<CharacterController>();
 	}
 
-	void Update()
-	{
-        //Running mechanic (at the time of creation I don't know if its a good idea but whatever)
-        if (Input.GetKeyDown(runKey))
-        {
-            speed = speed * speedMultiplier;
-        }
-        else if (Input.GetKeyUp(runKey))
-        {
-            speed = speed / speedMultiplier;
-        }
+    private void Start()
+    {
+        prevGravity = gravity;
+    }
 
-		if (controller.isGrounded)
-		{
-			moveDirection = transform.right * Input.GetAxis("Horizontal") * speed;
-			if (Input.GetButton("Jump"))
-			{
-				moveDirection.y += jumpSpeed;
-			}
-		}
-		controller.Move(moveDirection * Time.deltaTime);
-		moveDirection.y -= gravity * Time.deltaTime;
+    void Update()
+	{
+
+        if(globalVariables.Instance.InSubMenu == false)
+        {
+            //Running mechanic (at the time of creation I don't know if its a good idea but whatever)
+            if (Input.GetKeyDown(runKey))
+            {
+                speed = speed * speedMultiplier;
+            }
+            else if (Input.GetKeyUp(runKey))
+            {
+                speed = speed / speedMultiplier;
+            }
+
+            if (controller.isGrounded)
+            {
+                moveDirection = transform.right * Input.GetAxis("Horizontal") * speed;
+                if (Input.GetButton("Jump"))
+                {
+                    moveDirection.y += jumpSpeed;
+                }
+            }
+            controller.Move(moveDirection * Time.deltaTime);
+            moveDirection.y -= gravity * Time.deltaTime;
+        }
 	}
 
 	//Detects a collision

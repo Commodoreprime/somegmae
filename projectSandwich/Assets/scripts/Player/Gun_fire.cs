@@ -18,12 +18,15 @@ public class Gun_fire : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        //If statement that checks two things, if the user has mouse1 held down amd if the gametime is greater than nextFire
-        // if both are met, it adds gametime and the delcared 'fireRate' to nextfire then it clones the 'player_bullet' prefab at the declared parents position and parents rotation
-        if (Input.GetButton("Fire1") && Time.time > nextFire)
+        if (globalVariables.Instance.GameOn && globalVariables.Instance.InSubMenu == false)
         {
-            nextFire = Time.time + fireRate;
-            Instantiate(player_bullet, parent.position, parent.transform.rotation);
-        }
+            //If statement that checks two things, if the user has mouse1 held down amd if the gametime is greater than nextFire
+            // if both are met, it adds gametime and the delcared 'fireRate' to nextfire then it clones the 'player_bullet' prefab at the declared parents position and parents rotation
+            if (Input.GetButton("Fire1") && Time.time > nextFire)
+            {
+                nextFire = Time.time + fireRate;
+                Instantiate(player_bullet, parent.position, parent.transform.rotation);
+            }
+        }  
     }
 }
