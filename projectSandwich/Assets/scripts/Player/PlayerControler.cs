@@ -21,30 +21,29 @@ public class PlayerControler : MonoBehaviour
 
     void Update()
 	{
+		if(globalVariables.Instance.InSubMenu == false && globalVariables.Instance.GameOn == true)
+		{
+			//Running mechanic (at the time of creation I don't know if its a good idea but whatever)
+			if (Input.GetKeyDown(runKey))
+			{
+				speed = speed * speedMultiplier;
+			}
+			else if (Input.GetKeyUp(runKey))
+			{
+				speed = speed / speedMultiplier;
+			}
 
-        if(globalVariables.Instance.InSubMenu == false)
-        {
-            //Running mechanic (at the time of creation I don't know if its a good idea but whatever)
-            if (Input.GetKeyDown(runKey))
-            {
-                speed = speed * speedMultiplier;
-            }
-            else if (Input.GetKeyUp(runKey))
-            {
-                speed = speed / speedMultiplier;
-            }
-
-            if (controller.isGrounded)
-            {
-                moveDirection = transform.right * Input.GetAxis("Horizontal") * speed;
-                if (Input.GetButton("Jump"))
-                {
-                    moveDirection.y += jumpSpeed;
-                }
-            }
-            controller.Move(moveDirection * Time.deltaTime);
-            moveDirection.y -= gravity * Time.deltaTime;
-        }
+			if (controller.isGrounded)
+			{
+				moveDirection = transform.right * Input.GetAxis("Horizontal") * speed;
+				if (Input.GetButton("Jump"))
+				{
+					moveDirection.y += jumpSpeed;
+				}
+			}
+			controller.Move(moveDirection * Time.deltaTime);
+			moveDirection.y -= gravity * Time.deltaTime;
+		}
 	}
 
 	//Detects a collision
