@@ -17,8 +17,10 @@ public class optionsButtonClick : MonoBehaviour {
 		Button btn1 = ExitButton.GetComponent<Button> ();
 		btn1.onClick.AddListener (ExitButtonEvent);
 
+        /*
 		Button btn2 = ApplyButton.GetComponent<Button> ();
 		btn2.onClick.AddListener (ApplyButtonEvent);
+        */
 	}
 
 	// Everything below are custom events for the buttons in the options menu (including the options button itself on the main screen)
@@ -33,8 +35,4 @@ public class optionsButtonClick : MonoBehaviour {
         globalVariables.Instance.OptionsMenuEnabled = false;
         globalVariables.Instance.InSubMenu = false;
     }
-
-	void ApplyButtonEvent(){
-		globalVariables.Instance.optionsApplySettings = true;
-	}
 }

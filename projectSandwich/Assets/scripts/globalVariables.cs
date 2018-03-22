@@ -18,5 +18,5 @@ public class globalVariables : MonoBehaviour {
 	public bool OptionsMenuEnabled = false;
 	public bool GameOn = false;
     public bool InSubMenu = false;
-	public bool optionsApplySettings = false;
+	//public bool optionsApplySettings = false;
 }

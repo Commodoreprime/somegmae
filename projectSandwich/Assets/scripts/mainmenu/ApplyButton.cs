@@ -1,35 +1,36 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ApplyButton : MonoBehaviour {
 
-	private float rChannel;
-	private float gChannel;
-	private float bChannel;
-
+    [Header("Color picker settings")]
 	public Camera cam;
 	public Slider RControl;
 	public Slider GControl;
 	public Slider BControl;
+    private float rChannel;
+    private float gChannel;
+    private float bChannel;
 
-	// Use this for initialization
-	void Start () 
+
+    void Start () 
 	{
 		cam = cam.GetComponent<Camera> ();
 		RControl = RControl.GetComponent<Slider> ();
 		GControl = GControl.GetComponent<Slider> ();
 		BControl = BControl.GetComponent<Slider> ();
+        Button apply = gameObject.GetComponent<Button>();
+        apply.onClick.AddListener(ApplyEvent);
 	}
 
-	void OnMouseDown()
+	void ApplyEvent()
 	{
+        Debug.Log("Apply!");
 		Color newColor = new Color (RControl.value, GControl.value, BControl.value, 1);
 
-		if (globalVariables.Instance.optionsApplySettings == true) {
-			cam.backgroundColor = newColor;
-			globalVariables.Instance.optionsApplySettings = false;
-		}
+		cam.backgroundColor = newColor;
+		//globalVariables.Instance.optionsApplySettings = false;
 	}
 }
