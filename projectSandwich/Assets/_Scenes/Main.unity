@@ -482,6 +482,11 @@ Prefab:
       propertyPath: m_TagString
       value: 'Spawner '
       objectReference: {fileID: 0}
+    - target: {fileID: 23501898945145196, guid: 3c8b894c672ab41ac95fc48f55b691fe,
+        type: 2}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c8b894c672ab41ac95fc48f55b691fe, type: 2}
   m_IsPrefabParent: 0
@@ -918,8 +923,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hazard: {fileID: 1906741237441448, guid: 7c8da3ad586b2477a9b313d5a5cdd76b, type: 2}
-  spawnValues: {x: 50, y: 10, z: 0}
-  hazardCount: 0
+  spawnValues: {x: 25, y: 13, z: 0}
+  hazardCount: 10
   spawnWait: 0.5
   startWait: 0.5
   waveWait: 7
@@ -1057,7 +1062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hazard: {fileID: 1584923070401598, guid: 20fc51a8267974ed89cc233bc5142c16, type: 2}
-  spawnValues: {x: -51, y: 10, z: -0}
+  spawnValues: {x: -26, y: 12, z: -0}
   hazardCount: 10
   spawnWait: 8
   startWait: 0.5
@@ -1154,7 +1159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hazard: {fileID: 1843039077246698, guid: cbf6f93df3bf04d50a356984e15ad1f0, type: 2}
-  spawnValues: {x: -0.1, y: 30, z: -0.01}
+  spawnValues: {x: -5.9, y: 2.5, z: -0.01}
   hazardCount: 10
   spawnWait: 1
   startWait: 0.5
