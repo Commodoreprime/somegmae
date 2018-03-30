@@ -66,5 +66,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e92de8c9d40455f9f35d189e319ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ApplyButton: {fileID: 0}
   OptionsMenu: {fileID: 0}
   ExitButton: {fileID: 0}
