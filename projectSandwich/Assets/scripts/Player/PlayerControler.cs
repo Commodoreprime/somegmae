@@ -47,10 +47,11 @@ public class PlayerControler : MonoBehaviour
 	}
 
 	//Detects a collision
-	void OnCollisionEnter (Collision col)
+	void OnTriggerEnter(Collider col)
 	{
-		if (col.gameObject.tag == "powerup"){
-			powerup = col.gameObject.name;
+		if (col.CompareTag("Enemy"))
+		{
+			Destroy(gameObject);
 		}
 
 	}
