@@ -24,7 +24,7 @@ public class SpawnEnemyProper : MonoBehaviour
 			{
 				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
 				Quaternion spawnRotation = Quaternion.identity;
-				GameObject Enemy = (GameObject)Instantiate (hazard, spawnPosition, spawnRotation);
+				//GameObject Enemy = (GameObject)Instantiate (hazard, spawnPosition, spawnRotation);
 				yield return new WaitForSeconds (spawnWait);
 			}
 			yield return new WaitForSeconds (waveWait);

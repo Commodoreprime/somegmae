@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class AiCode : MonoBehaviour {
-	public Transform target;
+	public string foundTarget;
+
+	private Transform target;
 	public int moveSpeed;
 	public int rotationSpeed;
 
@@ -14,9 +16,8 @@ public class AiCode : MonoBehaviour {
 	}
 
 	void Start () {
-		GameObject go = GameObject.FindGameObjectWithTag("Player");
-
-		target = go.transform;
+		target = GameObject.FindGameObjectWithTag("Player").transform;
+		foundTarget = target.parent.name;
 	}
 
 	// Update is called once per frame
