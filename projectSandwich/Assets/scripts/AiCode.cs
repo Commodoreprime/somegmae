@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class AiCode : MonoBehaviour {
-	public string foundTarget;
 
 	private Transform target;
 	public int moveSpeed;
@@ -17,7 +16,6 @@ public class AiCode : MonoBehaviour {
 
 	void Start () {
 		target = GameObject.FindGameObjectWithTag("Player").transform;
-		foundTarget = target.parent.name;
 	}
 
 	// Update is called once per frame
@@ -32,5 +30,12 @@ public class AiCode : MonoBehaviour {
 		//Move Towards Target
 		myTransform.position += (target.position - myTransform.position).normalized * moveSpeed * Time.deltaTime;
 
+	}
+
+	private void OnTriggerEnter(Collider col)
+	{
+		if(col.CompareTag("Bullet")){
+			Destroy (col.gameObject);
+		}
 	}
 }
