@@ -20,6 +20,9 @@ public class mainMenuControlelr : MonoBehaviour {
 	public GameObject diedText;
 	// Boolean to lock the key to make it so the player cannot enter the menu while the death screen text displays
 	private bool deathKeyLock = false;
+	[HideInInspector]
+	public AudioSource Audio;
+	public AudioClip textThud;
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +33,7 @@ public class mainMenuControlelr : MonoBehaviour {
 		youText.SetActive(false);
 		haveText.SetActive(false);
 		diedText.SetActive(false);
+		Audio = gameObject.GetComponent<AudioSource> ();
 	}
 
 	//Displays "YOU HAVE DIED" on the screen when the playerDead boolean is true
@@ -46,17 +50,14 @@ public class mainMenuControlelr : MonoBehaviour {
 			Debug.Log("Enable parent GroupObject: Success!");
 
 			yield return new WaitForSeconds(1f);
-			globalVariables.Instance.MainController_Audio.Play();
 			youText.SetActive(true);
 			Debug.Log("Enable 'you' text: Success!");
 
 			yield return new WaitForSeconds(1.1f);
-			globalVariables.Instance.MainController_Audio.Play();
 			haveText.SetActive(true);
 			Debug.Log("Enable 'have' text: Success!");
 
 			yield return new WaitForSeconds(1.3f);
-			globalVariables.Instance.MainController_Audio.Play();
 			diedText.SetActive(true);
 			Debug.Log("Enable 'died' text: Success!");
 			Debug.Log("Sequence finished! Have a great day!");

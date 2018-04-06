@@ -10,17 +10,8 @@ public class globalVariables : MonoBehaviour {
 	//The public static delcaire and the Awake function allows variables from this script to be called in other scripts
 	public static globalVariables Instance;
 
-	//Declaires AudioSource that other scripts can call aupon (in theory)
-	[HideInInspector]
-	public AudioSource MainController_Audio;
-
 	void Awake(){
 		Instance = this;
-	}
-
-	public void Start()
-	{
-		MainController_Audio = GetComponent<AudioSource>();
 	}
 
 	// Variables stuff onfourth
