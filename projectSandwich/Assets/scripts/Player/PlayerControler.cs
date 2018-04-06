@@ -51,8 +51,9 @@ public class PlayerControler : MonoBehaviour
 	{
 		if (col.CompareTag("Enemy"))
 		{
+			//First it will set the playerDead Boolean to true, then it will destroy the gameobject it its attached to
+			globalVariables.Instance.playerDead = true;
 			Destroy(gameObject);
 		}
-
 	}
 }

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class SpawnEnemyProper : MonoBehaviour
@@ -17,17 +17,17 @@ public class SpawnEnemyProper : MonoBehaviour
 
 	IEnumerator SpawnWaves ()
 	{
-		yield return new WaitForSeconds (startWait);
+		yield return new WaitForSeconds(startWait);
 		while (true)
 		{
 			for (int i = 0; i < hazardCount; i++)
 			{
-				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+				Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
 				Quaternion spawnRotation = Quaternion.identity;
-				GameObject Enemy = (GameObject)Instantiate (hazard, spawnPosition, spawnRotation);
-				yield return new WaitForSeconds (spawnWait);
+				GameObject Enemy = (GameObject)Instantiate(hazard, spawnPosition, spawnRotation);
+				yield return new WaitForSeconds(spawnWait);
 			}
-			yield return new WaitForSeconds (waveWait);
+			yield return new WaitForSeconds(waveWait);
 		}
 	}
 }

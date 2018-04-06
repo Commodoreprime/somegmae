@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class AiCode : MonoBehaviour {
@@ -36,7 +36,9 @@ public class AiCode : MonoBehaviour {
 	private void OnTriggerEnter(Collider col)
 	{
 		if(col.CompareTag("Bullet")){
-			Destroy (gameObject);
+			//Both destroys the collided with gameobject and itself
+			Destroy(col.gameObject);
+			Destroy(gameObject);
 		}
 	}
 }
