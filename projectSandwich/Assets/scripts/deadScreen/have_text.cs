@@ -1,11 +1,12 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class have_text : MonoBehaviour {
-	[HideInInspector]
-	public AudioSource Audio;
+
+	private AudioSource Audio;
 	public AudioClip textThud;
+	public float volume;
 
 	private bool ComfirmThud;
 
@@ -16,7 +17,7 @@ public class have_text : MonoBehaviour {
 
 	void Update(){
 		if (ComfirmThud) {
-			Audio.PlayOneShot (textThud, 0.7f);
+			Audio.PlayOneShot (textThud, volume);
 			ComfirmThud = false;
 		}
 

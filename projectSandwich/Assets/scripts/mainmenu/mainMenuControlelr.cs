@@ -18,11 +18,10 @@ public class mainMenuControlelr : MonoBehaviour {
 	public GameObject youText;
 	public GameObject haveText;
 	public GameObject diedText;
+	public GameObject replayButton;
 	// Boolean to lock the key to make it so the player cannot enter the menu while the death screen text displays
 	private bool deathKeyLock = false;
-	[HideInInspector]
-	public AudioSource Audio;
-	public AudioClip textThud;
+	private bool sequencePassed;
 
 	// Use this for initialization
 	void Start () {
@@ -33,7 +32,8 @@ public class mainMenuControlelr : MonoBehaviour {
 		youText.SetActive(false);
 		haveText.SetActive(false);
 		diedText.SetActive(false);
-		Audio = gameObject.GetComponent<AudioSource> ();
+		replayButton.SetActive(false);
+		sequencePassed = false;
 	}
 
 	//Displays "YOU HAVE DIED" on the screen when the playerDead boolean is true
@@ -44,23 +44,35 @@ public class mainMenuControlelr : MonoBehaviour {
 			//Explained at bool creation point
 			deathKeyLock = true;
 
-			// This sequence is the meat of the coroutine, it debug Logs for debugging (which is quite useful!) and enables each of the text objects to True in an order
-			Debug.Log("Starting sequence...");
-			playerDeathGroupObject.SetActive(true);
-			Debug.Log("Enable parent GroupObject: Success!");
+			if (!sequencePassed)
+			{
+				// This sequence is the meat of the coroutine, it debug Logs for debugging (which is quite useful!) and enables each of the text objects to True in an order
+				Debug.Log("[PlayerDieScreen()] Starting sequence...");
+				playerDeathGroupObject.SetActive(true);
+				Debug.Log("[PlayerDieScreen()] Enable parent GroupObject: Success!");
 
-			yield return new WaitForSeconds(1f);
-			youText.SetActive(true);
-			Debug.Log("Enable 'you' text: Success!");
+				yield return new WaitForSeconds(1f);
+				youText.SetActive(true);
+				Debug.Log("[PlayerDieScreen()] Enable 'you' text: Success!");
 
-			yield return new WaitForSeconds(1.1f);
-			haveText.SetActive(true);
-			Debug.Log("Enable 'have' text: Success!");
+				yield return new WaitForSeconds(1.1f);
+				haveText.SetActive(true);
+				Debug.Log("[PlayerDieScreen()] Enable 'have' text: Success!");
 
-			yield return new WaitForSeconds(1.3f);
-			diedText.SetActive(true);
-			Debug.Log("Enable 'died' text: Success!");
-			Debug.Log("Sequence finished! Have a great day!");
+				yield return new WaitForSeconds(1.3f);
+				diedText.SetActive(true);
+				Debug.Log("[PlayerDieScreen()] Enable 'died' text: Success!");
+
+				yield return new WaitForSeconds(1.2f);
+				replayButton.SetActive(true);
+				Debug.Log("[PlayerDieScreen()] Enable replay button: Success!");
+				globalVariables.Instance.GameOn = false;
+				Debug.Log("[PlayerDieScreen()] Set globalVariables.Instance.GameOn Boolean to FALSE: Success! (Cursor is now free to move about)");
+
+				Debug.Log("[PlayerDieScreen()] Sequence finished! Stopping sequence...");
+				sequencePassed = true;
+				Debug.Log("[PlayerDieScreen()] Sequence stopped, Have a great day!");
+			}
 		}
 	}
 
