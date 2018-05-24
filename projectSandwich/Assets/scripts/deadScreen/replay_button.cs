@@ -12,6 +12,7 @@ public class replay_button : MonoBehaviour {
 	public float volume;
 
 	private bool ComfirmThud;
+	private bool keyPressToReload = false;
 
 	void Start()
 	{
@@ -21,8 +22,22 @@ public class replay_button : MonoBehaviour {
 		button.onClick.AddListener(buttonClick);
 	}
 
+	void onEnable()
+	{
+		keyPressToReload = true;
+		Debug.Log ("Set: 'keyPressToReload' to 'true'");
+	}
+
 	void Update()
 	{
+		if (keyPressToReload) 
+		{
+			if(Input.GetKeyDown(KeyCode.Space))
+			{
+				buttonClick ();
+			}
+		}
+
 		if (ComfirmThud)
 		{
 			Audio.PlayOneShot(textThud, volume);
