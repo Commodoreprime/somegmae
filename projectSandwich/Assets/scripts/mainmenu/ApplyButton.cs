@@ -29,8 +29,9 @@ public class ApplyButton : MonoBehaviour {
 	{
         Debug.Log("Apply!");
 		Color newColor = new Color (RControl.value, GControl.value, BControl.value, 1);
-
 		cam.backgroundColor = newColor;
+		Debug.Log ("Setting background color to R: "+ RControl.value * 255 +", G: "+ GControl.value * 255 +", B: "+ BControl.value * 255);
+
 		//globalVariables.Instance.optionsApplySettings = false;
 	}
 }
